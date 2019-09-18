@@ -24,13 +24,32 @@ a {
   text-decoration: none;
 }
 
- .maplink a::before {
-   content: url('map-marker.svg');
-   width: 40px;
-   height: 40px;
-   background-size: 100%;
-   background-repeat: no-repeat;
- }
+                                      /* BUTTON */
+.btn {
+color: white;
+background-color: #bd1d27;
+padding: 12px 60px;
+display: block;
+margin-top: 50px;
+width: 10em;
+margin-left: auto;
+margin-right: auto;
+text-transform: uppercase;
+transition: transform 0.3s ease;
+}
+
+.btn:hover {
+transform: scale(1.03);
+}
+
+                                      /* HEADER */
+.maplink a::before {
+ content: url('map-marker.svg');
+ width: 40px;
+ height: 40px;
+ background-size: 100%;
+ background-repeat: no-repeat;
+}
 
  .logo img {
   max-height: 150px;
@@ -74,6 +93,7 @@ a {
   margin: 0;
 }
 
+                                  /* NAVIGATION */
 nav .nav-list {
   padding: 0;
   list-style-type: none;
@@ -123,17 +143,63 @@ nav .nav-list .nav-list-item > a {
   color: #484848;
 }
 
+.dropdown-list {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: unset;
+  left: 0px;
+  top: 100%;
+  width: 100%;
+  padding: 0.4em 0;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list li {
+  list-style-type: none;
+  text-align: left;
+  padding: 0 1.1em 0 1.5em;
+  text-transform: capitalize;
+  font-size: 0.9em;
+}
+
+.dropdown-list-item a:hover {
+  color: #bd1d27;
+}
+
+
                                 /* HAMBURGER NAVBAR */
 .hamburger-navbar {
   display: none;
 }
 
-.hamburger-navbar img {
-  width: 38px;
+.hamburger-navbar .hamburger {
+  padding: 5px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  cursor: pointer;
+}
+
+.hamburger-navbar .hamburger-inner,
+.hamburger-navbar .hamburger-inner::after,
+.hamburger-navbar .hamburger-inner::before,
+.hamburger-navbar .hamburger.is-active .hamburger-inner,
+.hamburger-navbar .hamburger.is-active .hamburger-inner::after,
+.hamburger-navbar .hamburger.is-active .hamburger-inner::before {
+  background-color: white;
+  width: 31px;
+}
+
+.hamburger-navbar .hamburger-box {
+  width: 31px;
 }
 
 .hamburger-nav-list {
@@ -168,6 +234,7 @@ nav .nav-list .nav-list-item > a {
   text-align: center;
 }
 
+                                          /* HERO */
 .hero {
   background-image: url('nature_4k.jpg');
   background-repeat: no-repeat;
@@ -185,55 +252,7 @@ nav .nav-list .nav-list-item > a {
   color: white;
 }
 
-.btn {
-  color: white;
-  background-color: #bd1d27;
-  padding: 12px 60px;
-  display: block;
-  margin-top: 50px;
-  width: 10em;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
-  transition: transform 0.3s ease;
-}
-
-.dropdown-list {
-  display: none;
-  position: absolute;
-  background-color: white;
-  padding: unset;
-  left: 0px;
-  top: 100%;
-  width: 100%;
-  padding: 0.4em 0;
-  border-radius: 4px;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown:hover .dropdown-list {
-  display: block;
-}
-
-.dropdown-list li {
-  list-style-type: none;
-  text-align: left;
-  padding: 0 1.1em 0 1.5em;
-  text-transform: capitalize;
-  font-size: 0.9em;
-}
-
-.dropdown-list-item a:hover {
-  color: #bd1d27;
-}
-
-.btn:hover {
-  transform: scale(1.03);
-}
-
+                                      /* CARDS */
 .icons {
   background-image: linear-gradient(270deg, #51131b 0%, #cc3333 50%, #51131b 100%);
 }
@@ -247,12 +266,14 @@ nav .nav-list .nav-list-item > a {
   text-transform: uppercase;
 }
 
+                                    /* CONTENT */
 article h1 {
   text-align: center;
   color: #5a5a5a;
   text-transform: uppercase;
 }
 
+                                /* ADDITIONAL CONTENT */
 h2 {
   text-align: center;
   text-transform: uppercase;
@@ -290,6 +311,7 @@ h3 {
   margin-top: 50px;
 }
 
+                                  /* CAROUSEL */
 .slider .slick-prev {
   left: 0;
   z-index: 1;
@@ -323,9 +345,10 @@ h3 {
   text-align: center;
 }
 
-                                              /* FORM */
+                                    /* FORM */
 .form {
   background-color: lightblue;
+  padding: 3em;
 }
 
 .form button {
@@ -337,7 +360,7 @@ h3 {
 .form input {
   border: none;
   border-radius: 4px;
-  padding: 1em;
+  padding: 1em 1em 1em 2em;
   width: 100%;
   box-sizing: border-box;
 }
@@ -346,16 +369,64 @@ h3 {
   position: relative;
 }
 
-.subscribed {
-  display: none;
-  text-align: center;
-  color: white;
+.input-wrapper-name:before {
+    content: "\f007";
+    font-family: FontAwesome;
+    color: #bd1d27;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.8em;
 }
 
+.input-wrapper-phone:before {
+    content: "\f095";
+    font-family: FontAwesome;
+    color: #bd1d27;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.8em;
+}
+
+.input-wrapper-email:before {
+    content: "\f0e0";
+    font-family: FontAwesome;
+    color: #bd1d27;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.8em;
+}
+
+.input-wrapper-about:before {
+    content: "\f086";
+    font-family: FontAwesome;
+    color: #bd1d27;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.8em;
+}
+                                      /* FOOTER */
 footer {
-  margin-top: 400px;
+  margin-top: 5em;
+  background-image: linear-gradient(270deg, #51131b 0%, #cc3333 50%, #51131b 100%);
+  color: white;
+  text-align: center;
+  padding: 3em;
+  font-size: 11px;
 }
 
+footer p {
+  margin: 0;
+}
+
+                                    /* MEDIA QUERIES */
 @media (max-width: 900px) {
   .container {
     max-width: 700px;
@@ -414,7 +485,7 @@ footer {
     display: block;
   }
   .additional-heading .col:first-child {
-    border-bottom: 1px solid #eeeeee;        Nestrādā!!!!
+    border-bottom: 1px solid #eeeeee;
   }
 
   .form .row {
@@ -455,37 +526,3 @@ footer {
     width: 26px;
     height: 24px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

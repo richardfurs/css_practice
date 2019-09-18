@@ -4,15 +4,9 @@ $(document).ready(function(){
 
 
   function toggleNavbar() {
+    $('.hamburger--spin').toggleClass('is-active');
     $('.hamburger-nav-list').slideToggle();
   }
-  $('#btn-hamburger').click(toggleNavbar);
-
-
-  function thankYouMessage() {
-    $('.subscribed').show();
-  }
-  $('.submit-btn').click(thankYouMessage);
-
+  $('.hamburger--spin').click(toggleNavbar);
 
 });

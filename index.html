@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="master.css">
   <link rel="stylesheet" href="slick-master/slick/slick.css">
   <link rel="stylesheet" href="slick-master/slick/slick-theme.css">
+  <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Project</title>
 </head>
@@ -84,7 +86,11 @@
           </div>
 
           <div class="hamburger-navbar">
-            <img id="btn-hamburger" src="hamburger.svg" alt="">
+            <button class="hamburger hamburger--spin" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
             <ul class="hamburger-nav-list">
               <li class="hamburger-nav-list-item">
                 <a href="#">home</a>
@@ -314,28 +320,45 @@
         <form class="" action="index.html" method="post">
           <div class="row">
             <div class="col">
-              <input type="text" name="name" placeholder="Name">
-            </div>
-            <div class="col">
-              <div class="input">
-                <input type="text" name="phone" placeholder="Phone">
+              <div class="input-wrapper-name">
+                <input type="text" name="name" placeholder="Name" required>
               </div>
             </div>
             <div class="col">
-              <input type="email" name="email" placeholder="Email Address">
+              <div class="input-wrapper-phone">
+                <input type="text" name="phone" placeholder="Phone" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-wrapper-email">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <input type="text" name="about" placeholder="About">
+              <div class="input-wrapper-about">
+                <input type="text" name="about" placeholder="About" required>
+              </div>
             </div>
           </div>
           <button class="btn submit-btn" type="button" name="button">Submit</button>
-          <p class="subscribed">Thank you for your subscription.</p>
         </form>
       </div>
     </section>
-    <footer>Coming up</footer>
+    <footer>
+      <div class="container">
+        <p>
+          Copyright &copy;
+          <script type="text/javascript">
+            var dteNow = new Date();
+      	    var intYear = dteNow.getFullYear();
+      	    document.write(intYear);
+          </script>
+          CSS PRACTICE. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </div>
 
 
